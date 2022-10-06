@@ -42,12 +42,12 @@ public class SC_RigidbodyWalker : MonoBehaviour
         //Quaternion localRotation = Quaternion.Euler(0f, Input.GetAxis("Mouse X") * lookSpeed, 0f);
         //transform.rotation = transform.rotation * localRotation;
 
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        //float horizontalInput = Input.GetAxis("Horizontal");
+        //float verticalInput = Input.GetAxis("Vertical");
+        //Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if (inputDir != Vector3.zero)
-            playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
+        //if (inputDir != Vector3.zero)
+            //playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
     }
 
     void FixedUpdate()
