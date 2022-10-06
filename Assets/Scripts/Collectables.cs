@@ -20,6 +20,7 @@ public class Collectables : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            PlayerProperties.Instance.AddStars();
             Debug.Log("You Got A Star!");
             Destroy(this.gameObject);
         }
