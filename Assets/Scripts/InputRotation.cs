@@ -21,5 +21,7 @@ public class InputRotation : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         
+
+        
     }
 }
