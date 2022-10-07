@@ -162,7 +162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   canJump: 1
+  jumpCooldown: 1
   jumpHeight: 4
+  damageJumpHeight: 4
   playerCamera: {fileID: 0}
   lookSpeed: 2
   lookXLimit: 60

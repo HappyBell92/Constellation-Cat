@@ -2266,6 +2266,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b32fb0ceafda5f344ac4d083516192c4, type: 3}
+--- !u!1001 &1316897920306375951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 52.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -79.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9885517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.15088257
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 17.356
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417962, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316897920675417966, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
+      propertyPath: m_Name
+      value: DamageZoneTest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 331fda691152f06429f1b05e005c5ed2, type: 3}
 --- !u!1001 &4476858732403458266
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,7 +6,9 @@ public class SC_RigidbodyWalker : MonoBehaviour
 {
     public float speed = 5.0f;
     public bool canJump = true;
+    public float jumpCooldown = 1;
     public float jumpHeight = 2.0f;
+    public float damageJumpHeight = 2.0f;
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
@@ -58,6 +60,8 @@ public class SC_RigidbodyWalker : MonoBehaviour
             if (Input.GetButton("Jump") && canJump && grounded)
             {
                 r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
+                canJump = false;
+                StartCoroutine(JumpCooldown());
             }
 
             
@@ -66,8 +70,34 @@ public class SC_RigidbodyWalker : MonoBehaviour
         grounded = false;
     }
 
+    IEnumerator JumpCooldown()
+    {
+        yield return new WaitForSeconds(jumpCooldown);
+        canJump = true;
+    }
+
     void OnCollisionStay()
     {
         grounded = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "DamageZone")
+        {
+            PlayerProperties.Instance.RemoveHealth();
+            //r.AddForce(transform.up * damageJumpHeight, ForceMode.Impulse);
+            //Debug.Log("You Entered A Damage Zone!");
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "DamageZone")
+        {
+            r.AddForce(transform.up * damageJumpHeight, ForceMode.Impulse);
+            //PlayerProperties.Instance.RemoveHealth();
+            Debug.Log("You Entered A Damage Zone!");
+        }
     }
 }
