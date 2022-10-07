@@ -11,6 +11,8 @@ public class SC_RigidbodyWalker : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
 
+    public float rotationSpeed;
+
 
     bool grounded = false;
     Rigidbody r;
@@ -36,8 +38,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (grounded)
-        {
+        
             // Calculate how fast we should be moving
             Vector3 forwardDir = Vector3.Cross(transform.up, -playerCamera.transform.right).normalized;
             Vector3 rightDir = Vector3.Cross(transform.up, playerCamera.transform.forward).normalized;
@@ -54,13 +55,13 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
             r.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            if (Input.GetButton("Jump") && canJump)
+            if (Input.GetButton("Jump") && canJump && grounded)
             {
                 r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
             }
 
             
-        }
+        
 
         grounded = false;
     }

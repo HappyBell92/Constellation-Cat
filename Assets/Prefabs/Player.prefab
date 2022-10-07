@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169f3864fbafd54469a590477d0762d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
-  orientation: {fileID: 8040295534711355906}
-  playerObj: {fileID: 359384960622833810}
+  playerCamera: {fileID: 0}
+  speed: 20
+  rotationSpeed: 720
 --- !u!1 &8040295534711355907
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +166,7 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   lookSpeed: 2
   lookXLimit: 60
+  rotationSpeed: 0
 --- !u!114 &1379028381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f938ff948000cea4baf3a19b1d625d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stars: 0
+  stamps: 0
+  health: 0
 --- !u!1 &8040295536231478742
 GameObject:
   m_ObjectHideFlags: 0

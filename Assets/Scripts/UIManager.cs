@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
 
     public Text starText;
+    public Text stampText;
+    public Text healthText;
 
     private static UIManager instance;
     public static UIManager Instance
@@ -29,6 +31,16 @@ public class UIManager : MonoBehaviour
     public void UpdateStarText(int stars)
     {
         starText.text = "Stars: " + stars;
+    }
+
+    public void UpdateStampText(int stamps)
+    {
+        stampText.text = "Stamps: " + stamps;
+    }
+
+    public void UpdateHealthText(int health)
+    {
+        healthText.text = "Health: " + health;
     }
 
     // Start is called before the first frame update
