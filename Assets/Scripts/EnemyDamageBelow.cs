@@ -2,21 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamageZone : MonoBehaviour
+public class EnemyDamageBelow : MonoBehaviour
 {
-
-    public float knockBackStrength = 10.0f; // how hard the player gets knocked back
-    public float knockBackUp = 2.0f; // how hard the player gets knocked upwards
+    public float knockBackStrength = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,8 +25,6 @@ public class EnemyDamageZone : MonoBehaviour
             Vector3 awayFromEnemy = other.gameObject.transform.position - transform.position;
 
             playerRigidbody.AddForce(awayFromEnemy * knockBackStrength, ForceMode.Impulse);
-            playerRigidbody.velocity = awayFromEnemy * knockBackStrength;
-            playerRigidbody.velocity = playerRigidbody.transform.up * knockBackUp;
         }
     }
 }

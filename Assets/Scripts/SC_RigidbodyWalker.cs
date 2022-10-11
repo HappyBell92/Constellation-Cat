@@ -115,8 +115,6 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
         if(other.tag == "EnemyAttack")
         {
-            //r.AddForce(transform.up * enemyDamageUp, ForceMode.Impulse);
-            //r.AddForce(transform.forward * -enemyDamageBack, ForceMode.Impulse);
             Debug.Log("You Got Damaged By An Enemy!");
             frozen = true;
             StartCoroutine(IsFrozen());
