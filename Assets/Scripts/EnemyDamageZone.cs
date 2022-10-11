@@ -27,7 +27,8 @@ public class EnemyDamageZone : MonoBehaviour
             Vector3 awayFromEnemy = other.gameObject.transform.position - transform.position;
 
             playerRigidbody.AddForce(awayFromEnemy * knockBackStrength, ForceMode.Impulse);
-            playerRigidbody.AddForce(transform.up * knockBackUp, ForceMode.Impulse);
+            playerRigidbody.velocity = awayFromEnemy * knockBackStrength;
+            playerRigidbody.velocity = playerRigidbody.transform.up * knockBackUp;
         }
     }
 }
