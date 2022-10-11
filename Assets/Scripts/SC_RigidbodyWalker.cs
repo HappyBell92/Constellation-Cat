@@ -61,7 +61,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
             r.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            r.transform.rotation = Quaternion.LookRotation(r.velocity, transform.up);
+            //r.transform.rotation = Quaternion.LookRotation(r.velocity, transform.up);
 
             if (Input.GetButton("Jump") && canJump && grounded)
             {
@@ -100,7 +100,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
         if(other.tag == "EnemyAttack")
         {
-            PlayerProperties.Instance.RemoveHealth();
+            //PlayerProperties.Instance.RemoveHealth();
         }
     }
 
@@ -115,13 +115,22 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
         if(other.tag == "EnemyAttack")
         {
-            r.AddForce(transform.up * enemyDamageUp, ForceMode.Impulse);
-            r.AddForce(transform.forward * -enemyDamageBack, ForceMode.Impulse);
+            //r.AddForce(transform.up * enemyDamageUp, ForceMode.Impulse);
+            //r.AddForce(transform.forward * -enemyDamageBack, ForceMode.Impulse);
             Debug.Log("You Got Damaged By An Enemy!");
             frozen = true;
             StartCoroutine(IsFrozen());
         }
     }
+
+    //private void OnCollisionEnter(Collision other)
+    //{
+        //if (other.gameObject.CompareTag("EnemyAttack"))
+        //{
+            //Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
+
+        //}
+    //}
 
     IEnumerator IsFrozen()
     {
