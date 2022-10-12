@@ -121,13 +121,23 @@ public class SC_RigidbodyWalker : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("EnemyAttack"))
+        {
+            Debug.Log("BZZZT!");
+            frozen = true;
+            StartCoroutine(IsFrozen());
+        }
+    }
+
     //private void OnCollisionEnter(Collision other)
     //{
-        //if (other.gameObject.CompareTag("EnemyAttack"))
-        //{
-            //Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
+    //if (other.gameObject.CompareTag("EnemyAttack"))
+    //{
+    //Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
 
-        //}
+    //}
     //}
 
     IEnumerator IsFrozen()
