@@ -25,6 +25,8 @@ public class EnemyHurtBox : MonoBehaviour
             Vector3 awayFromEnemy = other.gameObject.transform.position - transform.position;
 
             playerRigidbody.velocity = playerRigidbody.transform.up * knockBackStrength;
+
+            Destroy(this.gameObject);
         }
     }
 }
