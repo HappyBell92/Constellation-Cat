@@ -15,7 +15,7 @@ public class EnemyAttackDuration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale -= new Vector3(-1, 0, -1) * Time.deltaTime * growSpeed;
+        transform.localScale -= new Vector3(-1, -1, 0) * Time.deltaTime * growSpeed;
     }
 
     IEnumerator AttackDuration()
