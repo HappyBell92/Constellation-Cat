@@ -245,6 +245,10 @@ PrefabInstance:
       value: PlayerPartickleRun
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753373, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: -169.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423060702890753373, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.91447234
       objectReference: {fileID: 0}
@@ -262,23 +266,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.17144068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.661
+      value: -0.7040024
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.032
+      value: -0.00999999
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.98135203
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.1922193
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalRotation.y
@@ -290,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 22.165
       objectReference: {fileID: 0}
     - target: {fileID: 6423060702890753374, guid: 5c0a654701b8f39478d2d4dd15170672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
