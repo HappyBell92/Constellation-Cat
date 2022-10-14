@@ -1534,7 +1534,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464341117}
-  m_LocalRotation: {x: 0.19607833, y: 0.000000008436188, z: -0.0000000016868991, w: 0.98058826}
+  m_LocalRotation: {x: 0.19607833, y: 0.000000008436187, z: -0.0000000016868991, w: 0.98058826}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3842,6 +3842,110 @@ PrefabInstance:
       propertyPath: planet
       value: 
       objectReference: {fileID: 173067331}
+    - target: {fileID: 7467077372287317212, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317212, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5ee05b80e7c83141ba1330cfbb4ae6a, type: 2}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 10.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ShapeModule.m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 283f897e4925411ebbaa758b4cb13fc2, type: 3}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ShapeModule.arc.spread
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ColorBySpeedModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ShapeModule.alignToDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: InitialModule.startRotation.scalar
+      value: 0.015707962
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.4056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.4056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.4056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ColorBySpeedModule.gradient.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317213, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317214, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.62944
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317214, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93427557
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317214, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.35655183
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467077372287317214, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 41.777
+      objectReference: {fileID: 0}
     - target: {fileID: 8040295535784315782, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
       propertyPath: m_RootOrder
       value: 88
@@ -6321,7 +6425,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091633801}
-  m_LocalRotation: {x: 0.19607833, y: 0.000000016872377, z: -0.0000000033737986, w: 0.98058826}
+  m_LocalRotation: {x: 0.19607833, y: 0.000000016872375, z: -0.0000000033737984, w: 0.98058826}
   m_LocalPosition: {x: 0.05144068, y: 81.26001, z: -2.4999871}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
