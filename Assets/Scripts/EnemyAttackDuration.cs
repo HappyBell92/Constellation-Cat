@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyAttackDuration : MonoBehaviour
 {
-    private float duration = 3;
-    private float growSpeed = 5;
+    private float duration = 1.5f;
+    //private float growSpeed = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,7 @@ public class EnemyAttackDuration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale -= new Vector3(-1, -1, 0) * Time.deltaTime * growSpeed;
+        //transform.localScale -= new Vector3(-1, -1, 0) * Time.deltaTime * growSpeed;
     }
 
     IEnumerator AttackDuration()

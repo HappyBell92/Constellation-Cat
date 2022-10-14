@@ -25,7 +25,7 @@ public class EnemyAttack : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && canAttack)
         {
             Debug.Log("I ATTACK!");
-            GameObject newAttack = Instantiate(attackObject, transform.position + -transform.up, transform.rotation * Quaternion.Euler(90, 0, 0));
+            GameObject newAttack = Instantiate(attackObject, transform.position + -transform.up, transform.rotation * Quaternion.Euler(0, 0, 0));
             canAttack = false;
             StartCoroutine(AttackCooldown());
         }

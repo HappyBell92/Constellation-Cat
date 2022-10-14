@@ -26,6 +26,7 @@ public class EnemyHurtBox : MonoBehaviour
 
             playerRigidbody.velocity = playerRigidbody.transform.up * knockBackStrength;
 
+
             Destroy(this.gameObject);
         }
     }
