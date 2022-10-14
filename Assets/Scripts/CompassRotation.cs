@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CompassRotation : MonoBehaviour
 {
+	
+
 	Transform player;
 	Vector3 target;
 	void Start()
@@ -13,9 +15,17 @@ public class CompassRotation : MonoBehaviour
 
 	void Update()
 	{
-		target = transform.position + (player.position - transform.position); // Vector from self to player
-		target = Vector3.ProjectOnPlane(target - transform.position, transform.up) + transform.position; //Flatten vector against own up direction
-		transform.LookAt(target, transform.parent.transform.up); //Convert vector to transform rotation quaternion
-		//Debug.DrawLine(transform.position, target, Color.red, .1f);
+		
+	}
+
+	private void OnTriggerStay(Collider other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			target = transform.position + (player.position - transform.position); // Vector from self to player
+			target = Vector3.ProjectOnPlane(target - transform.position, transform.up) + transform.position; //Flatten vector against own up direction
+			transform.LookAt(target, transform.parent.transform.up); //Convert vector to transform rotation quaternion
+																	 //Debug.DrawLine(transform.position, target, Color.red, .1f);
+		}
 	}
 }
