@@ -17,7 +17,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     public float rotationSpeed;
     private float frozenTime = 1;
-
+    
     public bool frozen = false;
     bool grounded = false;
     Rigidbody r;
