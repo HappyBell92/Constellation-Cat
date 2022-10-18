@@ -9635,6 +9635,8 @@ GameObject:
   - component: {fileID: 1418596272472488082}
   - component: {fileID: 2594080388081350455}
   - component: {fileID: 280614160448193533}
+  - component: {fileID: 5475664159834831195}
+  - component: {fileID: 7588116525535288695}
   m_Layer: 0
   m_Name: StarParticle
   m_TagString: Untagged
@@ -9709,3 +9711,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &5475664159834831195
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793573290566623784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7588116525535288695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793573290566623784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76935018ed734394f9aa73a8edd0cedd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
