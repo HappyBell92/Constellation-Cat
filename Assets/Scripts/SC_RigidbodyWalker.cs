@@ -43,6 +43,8 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     void FixedUpdate()
     {
+        
+
         if (frozen == false)
         {
             // Calculate how fast we should be moving
@@ -70,6 +72,9 @@ public class SC_RigidbodyWalker : MonoBehaviour
                 StartCoroutine(JumpCooldown());
             }
 
+            
+
+            
         }
 
             
