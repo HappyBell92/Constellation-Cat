@@ -9751,6 +9751,10 @@ PrefabInstance:
       propertyPath: planet
       value: 
       objectReference: {fileID: 173067331}
+    - target: {fileID: 2014985283, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: m_TagString
+      value: PlayerAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 8040295535784315782, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
       propertyPath: m_RootOrder
       value: 220
@@ -12935,7 +12939,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734869578}
-  m_LocalRotation: {x: 0.98877823, y: -0.000000005781219, z: -0.000000030475746, w: -0.14939108}
+  m_LocalRotation: {x: 0.98877823, y: 0.000000005781219, z: 0.000000030475746, w: -0.14939108}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
