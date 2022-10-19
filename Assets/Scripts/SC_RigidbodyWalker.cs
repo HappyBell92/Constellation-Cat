@@ -8,8 +8,10 @@ public class SC_RigidbodyWalker : MonoBehaviour
     [SerializeField] float groundCheckLength = 1f;
     public float speed = 5.0f;
     public bool canJump = true;
-    public float jumpCooldown = 1;
+    public float jumpCooldown = 0.5f;
     public float jumpHeight = 2.0f;
+    private int maxJumps = 1;
+    public int jumps;
     public float damageJumpHeight = 2.0f;
     public float enemyDamageUp = 1.0f;
     public float enemyDamageBack = 2.0f;
@@ -40,7 +42,14 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps > 0)
+        {
+            r.velocity = r.transform.up * jumpHeight;
+            //r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
+            canJump = false;
+            jumps = jumps - 1;
+            StartCoroutine(JumpCooldown());
+        }
     }
 
     void FixedUpdate()
@@ -50,6 +59,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         {
             Debug.Log("Hit Ground");
             grounded = true;
+            jumps = maxJumps;
         }
 
         else
@@ -79,12 +89,14 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
             //r.transform.rotation = Quaternion.LookRotation(r.velocity, transform.up);
 
-            if (Input.GetButton("Jump") && canJump && grounded)
-            {
-                r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
-                canJump = false;
-                StartCoroutine(JumpCooldown());
-            }
+            //if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps > 0)
+            //{
+                //r.velocity = r.transform.up * jumpHeight;
+                //r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
+                //canJump = false;
+                //jumps = jumps - 1;
+                //StartCoroutine(JumpCooldown());
+            //}
 
             
 
@@ -94,7 +106,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
             
         
 
-        grounded = false;
+        //grounded = false;
     }
 
     IEnumerator JumpCooldown()
