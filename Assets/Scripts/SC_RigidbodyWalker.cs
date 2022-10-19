@@ -6,11 +6,12 @@ public class SC_RigidbodyWalker : MonoBehaviour
 {
     [SerializeField] LayerMask groundMask;
     [SerializeField] float groundCheckLength = 1f;
+    [SerializeField] private int stamps;
     public float speed = 5.0f;
     public bool canJump = true;
     public float jumpCooldown = 0.5f;
     public float jumpHeight = 2.0f;
-    private int maxJumps = 1;
+    public int maxJumps = 1;
     public int jumps;
     public float damageJumpHeight = 2.0f;
     public float enemyDamageUp = 1.0f;
@@ -23,7 +24,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
     private float frozenTime = 1;
     
     public bool frozen = false;
-    bool grounded = false;
+    //bool grounded = false;
     Rigidbody r;
     Vector2 rotation = Vector2.zero;
     float maxVelocityChange = 10.0f;
@@ -40,6 +41,11 @@ public class SC_RigidbodyWalker : MonoBehaviour
         Cursor.visible = false;
     }
 
+    private void Start()
+    {
+        stamps = 0;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps > 0)
@@ -50,6 +56,12 @@ public class SC_RigidbodyWalker : MonoBehaviour
             jumps = jumps - 1;
             StartCoroutine(JumpCooldown());
         }
+
+        if(stamps > 29)
+        {
+            maxJumps = 2;
+        }
+
     }
 
     void FixedUpdate()
@@ -58,13 +70,17 @@ public class SC_RigidbodyWalker : MonoBehaviour
         if(Physics.Raycast(transform.position, -transform.up, groundCheckLength, groundMask))
         {
             Debug.Log("Hit Ground");
-            grounded = true;
-            jumps = maxJumps;
+            //grounded = true;
+            if (canJump)
+            {
+                jumps = maxJumps;
+            }
+            
         }
 
         else
         {
-            grounded = false;
+            //grounded = false;
         }
 
         Debug.DrawRay(transform.position, -transform.up * groundCheckLength, Color.yellow);
@@ -87,16 +103,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
             r.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            //r.transform.rotation = Quaternion.LookRotation(r.velocity, transform.up);
-
-            //if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps > 0)
-            //{
-                //r.velocity = r.transform.up * jumpHeight;
-                //r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
-                //canJump = false;
-                //jumps = jumps - 1;
-                //StartCoroutine(JumpCooldown());
-            //}
+            
 
             
 
@@ -106,7 +113,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
             
         
 
-        //grounded = false;
+        
     }
 
     IEnumerator JumpCooldown()
@@ -129,6 +136,11 @@ public class SC_RigidbodyWalker : MonoBehaviour
         if(other.tag == "EnemyAttack")
         {
             //PlayerProperties.Instance.RemoveHealth();
+        }
+
+        if (other.CompareTag("Stamp"))
+        {
+            stamps++;
         }
     }
 
@@ -159,6 +171,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         }
     }
 
+    
     //private void OnCollisionEnter(Collision other)
     //{
     //if (other.gameObject.CompareTag("EnemyAttack"))

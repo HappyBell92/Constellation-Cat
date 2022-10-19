@@ -71,5 +71,7 @@ public class PlayerProperties : MonoBehaviour
             Debug.Log("You Died");
             Destroy(this.gameObject);
         }
+
+        
     }
 }
