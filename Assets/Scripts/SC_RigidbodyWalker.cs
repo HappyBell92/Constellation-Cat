@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SC_RigidbodyWalker : MonoBehaviour
 {
+    [SerializeField] LayerMask groundMask;
+    [SerializeField] float groundCheckLength = 1f;
     public float speed = 5.0f;
     public bool canJump = true;
     public float jumpCooldown = 1;
@@ -43,7 +45,19 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, -transform.up, groundCheckLength, groundMask))
+        {
+            Debug.Log("Hit Ground");
+            grounded = true;
+        }
+
+        else
+        {
+            grounded = false;
+        }
+
+        Debug.DrawRay(transform.position, -transform.up * groundCheckLength, Color.yellow);
 
         if (frozen == false)
         {
@@ -89,10 +103,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         canJump = true;
     }
 
-    void OnCollisionStay()
-    {
-        grounded = true;
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {

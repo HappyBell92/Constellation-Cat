@@ -4133,7 +4133,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464341117}
-  m_LocalRotation: {x: 0.98409384, y: 0.000000006651705, z: 0.000000030297667, w: -0.17764942}
+  m_LocalRotation: {x: 0.98409384, y: -0.0000000066517036, z: -0.00000003029766, w: -0.17764942}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9747,6 +9747,14 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 2091633803}
+    - target: {fileID: 1379028380, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: groundCheckLength
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379028380, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 1379028381, guid: b7ce5cd45397b284eb56050a38c7bc1e, type: 3}
       propertyPath: planet
       value: 
@@ -16009,7 +16017,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091633801}
-  m_LocalRotation: {x: 0.98409384, y: 0.000000013303406, z: 0.000000060595326, w: -0.17764941}
+  m_LocalRotation: {x: 0.98409384, y: -0.000000013303406, z: -0.000000060595326, w: -0.17764941}
   m_LocalPosition: {x: 2.2684, y: -65.42634, z: 6.315962}
   m_LocalScale: {x: 0.60017145, y: 0.60017145, z: 0.60017145}
   m_ConstrainProportionsScale: 0
