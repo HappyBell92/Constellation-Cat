@@ -9,9 +9,9 @@ public class SC_RigidbodyWalker : MonoBehaviour
     [SerializeField] private int stamps;
     public float speed = 5.0f;
     public bool canJump = true;
-    public float jumpCooldown = 0.5f;
+    public float jumpCooldown = 0.3f;
     public float jumpHeight = 2.0f;
-    public int maxJumps = 1;
+    public int maxJumps = 2;
     public int jumps;
     public float damageJumpHeight = 2.0f;
     public float enemyDamageUp = 1.0f;
@@ -37,8 +37,8 @@ public class SC_RigidbodyWalker : MonoBehaviour
         r.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rotation.y = transform.eulerAngles.y;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     private void Start()

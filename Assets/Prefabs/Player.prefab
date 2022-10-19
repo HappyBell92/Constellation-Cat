@@ -273,10 +273,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4bc9de5e03f3fa48b94126790c9096c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  groundCheckLength: 1
+  stamps: 0
   speed: 5
   canJump: 1
-  jumpCooldown: 1
+  jumpCooldown: 0.3
   jumpHeight: 6
+  maxJumps: 2
+  jumps: 0
   damageJumpHeight: 4
   enemyDamageUp: 1
   enemyDamageBack: 2

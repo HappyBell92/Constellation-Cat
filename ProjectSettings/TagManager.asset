@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - EnemyAttack
   - PlayerAttack
+  - Stamp
   layers:
   - Default
   - TransparentFX

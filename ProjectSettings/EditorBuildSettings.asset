@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype4.unity
     guid: 90a17d00469be724da14c42d1e0911c6
+  - enabled: 1
+    path: Assets/Scenes/pienempi planeetta testi.unity
+    guid: 34cc0b89f6af0a04aa133cc818dab597
+  - enabled: 1
+    path: Assets/Scenes/GameplayTest.unity
+    guid: 22255783487b132489e4ebbbd7890cec
   m_configObjects: {}
