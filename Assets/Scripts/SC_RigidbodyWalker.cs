@@ -66,10 +66,10 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     void FixedUpdate()
     {
-        RaycastHit hit;
+        //RaycastHit hit;
         if(Physics.Raycast(transform.position, -transform.up, groundCheckLength, groundMask))
         {
-            Debug.Log("Hit Ground");
+            //Debug.Log("Hit Ground");
             //grounded = true;
             if (canJump)
             {
