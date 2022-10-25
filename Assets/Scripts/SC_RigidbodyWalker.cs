@@ -7,6 +7,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] float groundCheckLength = 1f;
     [SerializeField] private int stamps;
+    public ParticleSystem dust;
     public float speed = 5.0f;
     public bool canJump = true;
     public float jumpCooldown = 0.3f;
@@ -24,10 +25,11 @@ public class SC_RigidbodyWalker : MonoBehaviour
     private float frozenTime = 1;
     
     public bool frozen = false;
-    //bool grounded = false;
+    public bool grounded = false;
     Rigidbody r;
     Vector2 rotation = Vector2.zero;
     float maxVelocityChange = 10.0f;
+
 
     void Awake()
     {
@@ -70,7 +72,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         if(Physics.Raycast(transform.position, -transform.up, groundCheckLength, groundMask))
         {
             //Debug.Log("Hit Ground");
-            //grounded = true;
+            grounded = true;
             if (canJump)
             {
                 jumps = maxJumps;
@@ -80,7 +82,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
         else
         {
-            //grounded = false;
+            grounded = false;
         }
 
         Debug.DrawRay(transform.position, -transform.up * groundCheckLength, Color.yellow);
@@ -103,9 +105,18 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
             r.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            
 
-            
+
+            if (grounded && velocity.sqrMagnitude > 0.5f)
+            {
+                Debug.Log(velocity.sqrMagnitude);
+                dust.Play();
+            }
+
+            else
+            {
+                dust.Stop();
+            }
 
             
         }
@@ -135,7 +146,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
         if(other.tag == "EnemyAttack")
         {
-            //PlayerProperties.Instance.RemoveHealth();
+            PlayerProperties.Instance.RemoveHealth();
         }
 
         if (other.CompareTag("Stamp"))

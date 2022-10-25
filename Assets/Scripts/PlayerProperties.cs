@@ -8,6 +8,8 @@ public class PlayerProperties : MonoBehaviour
     [SerializeField] private int stars;
     [SerializeField] private int stamps;
     [SerializeField] private int health;
+    [SerializeField] GameObject gameOverMenu;
+    [SerializeField] GameObject mainUI;
 
     private static PlayerProperties instance;
     public static PlayerProperties Instance
@@ -69,8 +71,12 @@ public class PlayerProperties : MonoBehaviour
 
         if(health == 0)
         {
+            gameOverMenu.SetActive(true);
+            mainUI.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
             Debug.Log("You Died");
             Destroy(this.gameObject);
+
         }
 
         
