@@ -154,6 +154,13 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "com.unity.vfx-toolbox": {
+      "version": "https://github.com/Unity-Technologies/VFXToolbox.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "89464c0155b00bc3f9c8aa5a59eb98161a113dc9"
+    },
     "com.unity.visualscripting": {
       "version": "1.7.8",
       "depth": 0,
