@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3822721084559406322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.56931376, y: 0.48457414, z: 0.59937227}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3709032980025058327}
@@ -44,12 +44,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.91197
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.014305
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.4048
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57,11 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalRotation.y
@@ -69,19 +73,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8310e9817048f234ca3c23024285a289, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -111,6 +115,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8310e9817048f234ca3c23024285a289, type: 3}
   m_PrefabInstance: {fileID: 3815561145564480508}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1123342978
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049564497762483885}
+  m_Material: {fileID: 13400000, guid: a51b7c46c5c59974da0616093c13e6e2, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7379014, y: 3.535138, z: 1.8270541}
+  m_Center: {x: 0.002033074, y: 0.00000041373255, z: 0.5264106}
+--- !u!65 &1123342979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049564497762483885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.68, y: 3.4399998, z: 0.23542665}
+  m_Center: {x: 0.015885768, y: 0.00000043902395, z: 1.3707381}
 --- !u!64 &3534513076057074200
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -120,7 +150,7 @@ MeshCollider:
   m_GameObject: {fileID: 4049564497762483885}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
