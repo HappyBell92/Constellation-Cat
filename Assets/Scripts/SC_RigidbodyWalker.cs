@@ -109,7 +109,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
             if (grounded && velocity.sqrMagnitude > 0.5f)
             {
-                Debug.Log(velocity.sqrMagnitude);
+                //Debug.Log(velocity.sqrMagnitude);
                 dust.Play();
             }
 
