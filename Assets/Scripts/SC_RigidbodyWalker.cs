@@ -7,6 +7,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] float groundCheckLength = 1f;
     [SerializeField] private int stamps;
+    [SerializeField] Animator catAnim;
     public ParticleSystem starJump;
     public ParticleSystem dust;
     public float speed = 5.0f;
@@ -58,6 +59,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         {
             r.velocity = r.transform.up * jumpHeight;
             Instantiate(starJump, transform.position + -transform.up, transform.rotation * Quaternion.Euler(0, 0, 0));
+            catAnim.SetTrigger("Jump"); // Do jump animation
             canJump = false;
             jumps = jumps - 1;
             StartCoroutine(JumpCooldown());
@@ -82,6 +84,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         {
             //Debug.Log("Hit Ground");
             grounded = true;
+            catAnim.SetBool("Grounded", true);
             if (canJump)
             {
                 jumps = maxJumps;
@@ -92,6 +95,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         else
         {
             grounded = false;
+            catAnim.SetBool("Grounded", false);
         }
 
         Debug.DrawRay(transform.position, -transform.up * groundCheckLength, Color.yellow);
@@ -114,18 +118,13 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
             r.AddForce(velocityChange, ForceMode.VelocityChange);
 
+            catAnim.SetFloat("MoveSpeed", r.velocity.sqrMagnitude/10f); //Magic number 20f to make velocity reasonably small
 
 
-            if (grounded && velocity.sqrMagnitude > 0.5f)
+            /* if (grounded && velocity.sqrMagnitude > 1f)
             {
-                //Debug.Log(velocity.sqrMagnitude);
-                dust.Play();
-            }
-
-            else
-            {
-                dust.Stop();
-            }
+                StepDustEmit(); 
+            } */
 
             
         }
@@ -134,6 +133,11 @@ public class SC_RigidbodyWalker : MonoBehaviour
         
 
         
+    }
+    public void StepDustEmit() //Event called by KissaAnimationEvents
+    {
+        if(r.velocity.sqrMagnitude > 2f) // If moving full speed aka magic number 2f or faster
+            dust.Play();   
     }
 
     IEnumerator JumpCooldown()
