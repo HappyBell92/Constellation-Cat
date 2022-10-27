@@ -213,65 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockBackStrength: 10
---- !u!1 &1212087809327235542
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3324404607193042536}
-  - component: {fileID: 1230471648246296907}
-  m_Layer: 0
-  m_Name: JellyFishEnemyVisuals
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3324404607193042536
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212087809327235542}
-  m_LocalRotation: {x: 0.00017264773, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 9040262617500512163}
-  m_Father: {fileID: 4895327921033132516}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1773428102 &1230471648246296907
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212087809327235542}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationAtRest: {x: 0.019783963, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_RotationOffsets:
-  - {x: -90, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 4873414004804872704}
-    weight: 1
 --- !u!1 &3002509085347931125
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5211768511163402846}
   m_LocalRotation: {x: 0.0002991375, y: -0, z: -0, w: 0.99999994}
-  m_LocalPosition: {x: 1.6456361, y: -37.45003, z: 0.2855816}
+  m_LocalPosition: {x: 1.6456361, y: -37.450054, z: 0.2855816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -787,7 +728,7 @@ BoxCollider:
   m_GameObject: {fileID: 5211768511163402846}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.44, z: 0.8}
   m_Center: {x: 0, y: 0.5, z: 0}
@@ -798,7 +739,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5211768511163402846}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e7d6549c3863442a3dc7f524eab18d, type: 3}
   m_Name: 
@@ -813,10 +754,10 @@ ParentConstraint:
   m_GameObject: {fileID: 5211768511163402846}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 1.6456361, y: -37.45003, z: 0.2855816}
+  m_TranslationAtRest: {x: 1.6456361, y: -37.450054, z: 0.2855816}
   m_RotationAtRest: {x: 0.034278613, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 1.6456361, y: 0.28558612, z: 37.450035}
+  - {x: 1.6456361, y: 0.28558606, z: 37.450058}
   m_RotationOffsets:
   - {x: -89.980225, y: 0, z: 0}
   m_AffectTranslationX: 1
@@ -951,8 +892,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4895327921033132516}
-  - component: {fileID: 6396230983339471809}
-  - component: {fileID: 1886080357863927205}
   m_Layer: 0
   m_Name: JellyFishEnemyHovering
   m_TagString: EnemyWeakpoint
@@ -978,149 +917,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6396230983339471809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8987858108331672047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e7d6549c3863442a3dc7f524eab18d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockBackStrength: 10
---- !u!135 &1886080357863927205
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8987858108331672047}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.47
-  m_Center: {x: 0, y: 0.36, z: 0}
---- !u!1001 &8863030781000353864
+--- !u!1001 &1202564899671661484
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3324404607193042536}
+    m_TransformParent: {fileID: 4895327921033132516}
     m_Modifications:
-    - target: {fileID: -9063589543538667217, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3cc1e8bd1a982794db3fad4d04642610, type: 2}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
+    - target: {fileID: 27704495144196730, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
+      propertyPath: m_Name
+      value: JellyFishEnemyVisuals
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 118181103874910951, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
+      propertyPath: m_Sources.Array.data[0].sourceTransform
+      value: 
+      objectReference: {fileID: 4873414004804872704}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.00017264773
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
+    - target: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 607882598933087444, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.000005129812
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
-      propertyPath: m_Name
-      value: JellyfishEnemy_Rigattu
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
---- !u!1 &1971004284820583799 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7036213049465896255, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
-  m_PrefabInstance: {fileID: 8863030781000353864}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &253493712980259170
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971004284820583799}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f8484e8c6f7cb8849bb261f198832d9a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &8520430444383843609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
-  m_PrefabInstance: {fileID: 8863030781000353864}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &6288256547488563990
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8520430444383843609}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 11bff1f5e9ead854aae1aa26b1bddb78, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!4 &9040262617500512163 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
+--- !u!4 &3324404607193042536 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11ca3b7034b9e4243ac9f6a2f4213426, type: 3}
-  m_PrefabInstance: {fileID: 8863030781000353864}
+  m_CorrespondingSourceObject: {fileID: 4508936690452239812, guid: fa87b05f8fc905c4f9a9d22357394db2, type: 3}
+  m_PrefabInstance: {fileID: 1202564899671661484}
   m_PrefabAsset: {fileID: 0}
