@@ -10,7 +10,7 @@ public class PlayerProperties : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject mainUI;
-    [SerializeField] GameObject WinScreen;
+    
 
     private float starTimer = 0.2f;
     public bool canCollectStar = true;
@@ -37,7 +37,7 @@ public class PlayerProperties : MonoBehaviour
 
     public void AddStars()
     {
-        if (canCollectStar = true)
+        if (canCollectStar == true)
         {
             stars++;
             canCollectStar = false;
@@ -85,6 +85,7 @@ public class PlayerProperties : MonoBehaviour
             gameOverMenu.SetActive(true);
             mainUI.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Debug.Log("You Died");
             Destroy(this.gameObject);
 
@@ -93,7 +94,6 @@ public class PlayerProperties : MonoBehaviour
         if(stars >= 12)
         {
             winCondition = true;
-            WinScreen.SetActive(true);
         }
     }
 

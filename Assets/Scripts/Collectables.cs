@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
+    private bool isColliding = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +19,20 @@ public class Collectables : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (isColliding) return;
+        isColliding = true;
+        if(other.tag == "Player" && isColliding)
         {
             PlayerProperties.Instance.AddStars();
             Debug.Log("You Got A Star!");
             Destroy(this.gameObject);
         }
+        StartCoroutine(Reset());
+    }
+
+    private IEnumerator Reset()
+    {
+        yield return new WaitForEndOfFrame();
+        isColliding = false;
     }
 }

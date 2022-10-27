@@ -7,6 +7,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] float groundCheckLength = 1f;
     [SerializeField] private int stamps;
+    public ParticleSystem starJump;
     public ParticleSystem dust;
     public float speed = 5.0f;
     public bool canJump = true;
@@ -20,6 +21,9 @@ public class SC_RigidbodyWalker : MonoBehaviour
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
+    private bool isColliding = false;
+    private float iFrames = 1f;
+    private bool invincible = false;
 
     public float rotationSpeed;
     private float frozenTime = 1;
@@ -50,15 +54,21 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps > 0 != frozen)
         {
             r.velocity = r.transform.up * jumpHeight;
+            Instantiate(starJump, transform.position + -transform.up, transform.rotation * Quaternion.Euler(0, 0, 0));
             canJump = false;
             jumps = jumps - 1;
             StartCoroutine(JumpCooldown());
         }
 
-        if(stamps > 29)
+        if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps >0 != frozen != grounded)
+        {
+            Debug.Log("Double Jump!");
+        }
+
+            if (stamps > 29)
         {
             maxJumps = 2;
         }
@@ -136,22 +146,27 @@ public class SC_RigidbodyWalker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "DamageZone")
+        if (isColliding) return;
+        isColliding = true;
+        if (other.tag == "DamageZone" && isColliding != invincible)
         {
             PlayerProperties.Instance.RemoveHealth();
-            //r.AddForce(transform.up * damageJumpHeight, ForceMode.Impulse);
-            //Debug.Log("You Entered A Damage Zone!");
+            invincible = true;
+            StartCoroutine(InvincibleTime());
         }
 
-        if(other.tag == "EnemyAttack")
+        if(other.tag == "EnemyAttack" && isColliding != invincible)
         {
             PlayerProperties.Instance.RemoveHealth();
+            invincible = true;
+            StartCoroutine(InvincibleTime());
         }
 
         if (other.CompareTag("Stamp"))
         {
             stamps++;
         }
+        StartCoroutine(Reset());
     }
 
     private void OnTriggerStay(Collider other)
@@ -195,5 +210,17 @@ public class SC_RigidbodyWalker : MonoBehaviour
     {
         yield return new WaitForSeconds(frozenTime);
         frozen = false;
+    }
+
+    private IEnumerator Reset()
+    {
+        yield return new WaitForEndOfFrame();
+        isColliding = false;
+    }
+
+    IEnumerator InvincibleTime()
+    {
+        yield return new WaitForSeconds(iFrames);
+        invincible = false;
     }
 }

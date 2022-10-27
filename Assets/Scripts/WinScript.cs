@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinScript : MonoBehaviour
 {
     [SerializeField] PlayerProperties collectablesScript;
+    [SerializeField] GameObject winScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,11 @@ public class WinScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("winCondtition = " + collectablesScript.winCondition+", stars = "+ collectablesScript.stars);
-        if (collectablesScript.winCondition = true && other.gameObject.CompareTag("Player"))
+        if (collectablesScript.winCondition == true && other.gameObject.CompareTag("Player"))
         {
             Debug.Log("YOU WIN!");
+            winScreen.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
