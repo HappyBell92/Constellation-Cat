@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 68a88b350add151479f9cfb1580fb4ce, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5793f4c735e3bda4eaca0c1054d5ee6f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.52902675, g: 0.42528492, b: 0.86763006, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -845,10 +845,10 @@ RectTransform:
   m_Father: {fileID: 402903845}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 70}
+  m_SizeDelta: {x: -1016, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936329497
 MonoBehaviour:
@@ -1274,7 +1274,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 54470ef156099644988fc32eb837bdd0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 32b128292d615b04c86247b6a465b97e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -1734,10 +1734,10 @@ RectTransform:
   m_Father: {fileID: 402903845}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -116.7}
-  m_SizeDelta: {x: 200, y: 70}
+  m_SizeDelta: {x: -1016, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721323042
 MonoBehaviour:
