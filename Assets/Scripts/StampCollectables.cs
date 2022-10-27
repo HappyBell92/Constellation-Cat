@@ -5,6 +5,10 @@ using UnityEngine;
 public class StampCollectables : MonoBehaviour
 {
     private bool isColliding = false;
+    public AudioSource stampCollect;
+
+    public Collider collider;
+    public MeshRenderer mesh;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +29,10 @@ public class StampCollectables : MonoBehaviour
         {
             PlayerProperties.Instance.AddStamps();
             PlayerProperties.Instance.AddHealth();
+            stampCollect.Play();
+            collider.enabled = mesh.enabled = false;
             Debug.Log("You Got A Stamp!");
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
         StartCoroutine(Reset());
     }
