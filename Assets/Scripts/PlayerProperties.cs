@@ -69,7 +69,7 @@ public class PlayerProperties : MonoBehaviour
             health = 3;
         }
 
-        if(health == 0)
+        if(health <= 0)
         {
             gameOverMenu.SetActive(true);
             mainUI.SetActive(false);

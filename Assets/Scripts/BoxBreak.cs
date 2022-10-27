@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BoxBreak : MonoBehaviour
 {
-    [SerializeField] GameObject star;
-    [SerializeField] GameObject stamp;
+    [SerializeField] GameObject itemSpawn;
+    public ParticleSystem breakBox;
     private float knockBackStrength = 2.0f;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,8 @@ public class BoxBreak : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("I have broken!");
-            GameObject newStamp = Instantiate(stamp, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
+            GameObject newStamp = Instantiate(itemSpawn, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
+            Instantiate(breakBox, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
 
             Rigidbody playerRigidbody = other.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromEnemy = other.gameObject.transform.position - transform.position;
