@@ -8,13 +8,15 @@ public class JellyFishHover : MonoBehaviour
 	[SerializeField] float hoverBoost =1f; 
 	[SerializeField] float chaseSpeed =2f; 
 	[SerializeField] float hoverGravity =1f; 
-	[SerializeField] float detectionTimeDelay =0.33f; 
-	[SerializeField] float detectionRadius =5f; 
+	[SerializeField] float detectionTimeDelay =0.33f; //Attempts to detect three times per second
+	[SerializeField] float detectionRadius =5f; //Meters to detect
+	[SerializeField] float aggroTimeMax =8f; //Time enemy stays angry after player exits detection radius
 	[SerializeField] LayerMask hoverGroundMask;
 	[SerializeField] LayerMask playerLayer;
 	Collider[] playerCatCollider;
 	bool playerFound = false;
-	float detectionTimer = 1f;
+	float detectionTimer = 1f; //Always counts down 1 to 0
+	float aggroTimer;
 	Transform planetCore;
 	Transform playerCatTransform;
 	Rigidbody rb;
@@ -24,14 +26,17 @@ public class JellyFishHover : MonoBehaviour
 		playerCatCollider = new Collider[1];
 		planetCore = PlanetCore.Instance.transform; // Get reference to planet core transform from PlanetCore static instance
 		rb = GetComponent<Rigidbody>();
-		//playerCat = GameObject.FindWithTag("Player").transform; //to-do: avoid using Find
+		aggroTimer = aggroTimeMax;
 	}
 	void FixedUpdate()
 	{
 		DoHoverHeight();
 		TryDetectPlayer();
 		if(playerFound)
+		{
+			CheckAggro();
 			DoChaseDirection();
+		}
 	}
 
 	void DoHoverHeight()
@@ -72,8 +77,21 @@ public class JellyFishHover : MonoBehaviour
 				{
 					playerCatTransform = playerCatCollider[0].transform;
 					playerFound = true;
+					aggroTimer = aggroTimeMax;
 				}
 			}
+		}
+	}
+	void CheckAggro()
+	{
+		if(aggroTimer > 0f)
+		{
+			aggroTimer -= Time.fixedDeltaTime; // Timer ticks down 1f per second
+		}
+		else
+		{
+			playerFound = false;
+			Debug.Log(gameObject+" lost player, returning to idle");
 		}
 	}
 	void OnDrawGizmosSelected()
