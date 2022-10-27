@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8078684987853339952}
   - component: {fileID: 8078684987853339954}
   - component: {fileID: 3199113814507367301}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BreakableBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75f875a11a10ea478f9fafd6b497e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star: {fileID: 1793573290566623784, guid: 66abe1968b45da64c99f586f37bd46bb, type: 3}
-  stamp: {fileID: 2048763935463247443, guid: b3103047496c80544aab73b3b5236ae0, type: 3}
+  itemSpawn: {fileID: 2048763935463247443, guid: b3103047496c80544aab73b3b5236ae0, type: 3}
+  breakBox: {fileID: 2402327918376997706, guid: e568ae2f72c5c824b8f38afd4cb0ec46, type: 3}
 --- !u!65 &8078684987853339954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,6 +129,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6d1a4ed6e848cea4886b3590f1dbfe97, type: 3}
       propertyPath: m_Name
       value: laatikko
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d1a4ed6e848cea4886b3590f1dbfe97, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d1a4ed6e848cea4886b3590f1dbfe97, type: 3}

@@ -53,7 +53,6 @@ public class SC_RigidbodyWalker : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canJump && jumps > 0)
         {
             r.velocity = r.transform.up * jumpHeight;
-            //r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
             canJump = false;
             jumps = jumps - 1;
             StartCoroutine(JumpCooldown());
