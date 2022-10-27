@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerProperties : MonoBehaviour
 {
-    [SerializeField] private int stars;
+    [SerializeField] public int stars;
     [SerializeField] private int stamps;
     [SerializeField] private int health;
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject mainUI;
+    
+
+    private float starTimer = 0.2f;
+    public bool canCollectStar = true;
+
+    public bool winCondition = false;
 
     private static PlayerProperties instance;
     public static PlayerProperties Instance
@@ -31,7 +37,12 @@ public class PlayerProperties : MonoBehaviour
 
     public void AddStars()
     {
-        stars++;
+        if (canCollectStar == true)
+        {
+            stars++;
+            canCollectStar = false;
+            StartCoroutine(StarCoolDown());
+        }
     }
 
     public void AddStamps()
@@ -74,11 +85,23 @@ public class PlayerProperties : MonoBehaviour
             gameOverMenu.SetActive(true);
             mainUI.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Debug.Log("You Died");
             Destroy(this.gameObject);
 
         }
 
-        
+        if(stars >= 12)
+        {
+            winCondition = true;
+        }
     }
+
+    IEnumerator StarCoolDown()
+    {
+        yield return new WaitForSeconds(starTimer);
+        canCollectStar = true;
+    }
+
+    
 }
