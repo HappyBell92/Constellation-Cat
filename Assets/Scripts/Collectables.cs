@@ -5,6 +5,10 @@ using UnityEngine;
 public class Collectables : MonoBehaviour
 {
     private bool isColliding = false;
+    public AudioSource starGet;
+
+    public Collider collider;
+    public MeshRenderer mesh;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +29,10 @@ public class Collectables : MonoBehaviour
         {
             PlayerProperties.Instance.AddStars();
             Debug.Log("You Got A Star!");
-            Destroy(this.gameObject);
+            collider.enabled = mesh.enabled = false;
+            starGet.Play();
+            
+            //Destroy(this.gameObject);
         }
         StartCoroutine(Reset());
     }
