@@ -9,6 +9,10 @@ public class StampCollectables : MonoBehaviour
 
     public Collider collider;
     public MeshRenderer mesh;
+    public ParticleSystem shine;
+    public ParticleSystem shine2;
+
+    public bool includeChildren = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,8 @@ public class StampCollectables : MonoBehaviour
             PlayerProperties.Instance.AddHealth();
             stampCollect.Play();
             collider.enabled = mesh.enabled = false;
+            shine.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
+            shine2.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
             Debug.Log("You Got A Stamp!");
             //Destroy(this.gameObject);
         }

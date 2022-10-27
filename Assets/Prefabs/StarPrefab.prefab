@@ -4864,6 +4864,9 @@ MonoBehaviour:
   starGet: {fileID: -6525949402906128792}
   collider: {fileID: 2905894408262718818}
   mesh: {fileID: 5795051635422317808}
+  shine: {fileID: 2088427834423570775}
+  shine2: {fileID: 4684865577645182179}
+  includeChildren: 1
 --- !u!135 &2905894408262718818
 SphereCollider:
   m_ObjectHideFlags: 0

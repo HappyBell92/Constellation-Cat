@@ -9,6 +9,10 @@ public class Collectables : MonoBehaviour
 
     public Collider collider;
     public MeshRenderer mesh;
+    public ParticleSystem shine;
+    public ParticleSystem shine2;
+
+    public bool includeChildren = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,8 @@ public class Collectables : MonoBehaviour
             Debug.Log("You Got A Star!");
             collider.enabled = mesh.enabled = false;
             starGet.Play();
+            shine.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
+            shine2.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
             
             //Destroy(this.gameObject);
         }

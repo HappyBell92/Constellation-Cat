@@ -9740,6 +9740,9 @@ MonoBehaviour:
   starGet: {fileID: 6831061752081425885}
   collider: {fileID: 5475664159834831195}
   mesh: {fileID: 280614160448193533}
+  shine: {fileID: 1451677189794403889}
+  shine2: {fileID: 1451677188767957949}
+  includeChildren: 1
 --- !u!82 &6831061752081425885
 AudioSource:
   m_ObjectHideFlags: 0

@@ -9676,6 +9676,8 @@ MonoBehaviour:
   stampCollect: {fileID: -12860275390469638}
   collider: {fileID: 1092033601519641951}
   mesh: {fileID: 1609541996363444556}
+  shine: {fileID: 8776666480350970506}
+  shine2: {fileID: 5728509298585537787}
 --- !u!135 &1092033601519641951
 SphereCollider:
   m_ObjectHideFlags: 0
