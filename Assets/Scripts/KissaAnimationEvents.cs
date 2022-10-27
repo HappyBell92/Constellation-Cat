@@ -8,7 +8,6 @@ public class KissaAnimationEvents : MonoBehaviour
 	void StepDust()
 	{
 		KissaMovement.StepDustEmit(); //What are you doing step-dust?
-		Debug.Log($"Step!");
 	}
 
 }
