@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: 23b1bc1529210a4428be0380f93ca777
+guid: e6bb853d836704247a5d2a5a877b884c
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 2674427572936968916
+    second: Armature|IdleAnimaatio_Main
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -68,15 +71,15 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 156
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
