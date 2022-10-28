@@ -17,7 +17,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 	public bool canJump = true;
 	public float jumpCooldown = 0.3f;
 	public float jumpHeight = 2.0f;
-	public int maxJumps = 2;
+	public int maxJumps = 1;
 	public int jumps;
 	public float damageJumpHeight = 2.0f;
 	public float enemyDamageUp = 1.0f;
@@ -68,7 +68,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 			//Debug.Log("Double Jump!");
 		}
 
-			if (stamps > 29)
+			if (stamps >= 30)
 		{
 			maxJumps = 2;
 		}
