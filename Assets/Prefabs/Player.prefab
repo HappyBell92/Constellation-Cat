@@ -177,6 +177,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 37fbde84c23cf7a4780a6c789cfc2aad, type: 3}
   - {fileID: 8300000, guid: bc2f935be13a47549bb311faa818fd64, type: 3}
   catAnim: {fileID: 2816795497838094673}
+  playerProperties: {fileID: 5639610372948535137}
   starJump: {fileID: 4147259884401342381, guid: 469b21be21a7c1d46b122eedce82aecf, type: 3}
   dust: {fileID: 7267684713386592480}
   speed: 5
@@ -227,6 +228,7 @@ MonoBehaviour:
   mainUI: {fileID: 0}
   canCollectStar: 1
   winCondition: 0
+  doubleJumpActive: 0
 --- !u!82 &6540744689879690683
 AudioSource:
   m_ObjectHideFlags: 0
