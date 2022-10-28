@@ -9639,7 +9639,7 @@ GameObject:
   m_Layer: 0
   m_Name: CatPawPrefab
   m_TagString: Stamp
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9678,6 +9678,7 @@ MonoBehaviour:
   mesh: {fileID: 1609541996363444556}
   shine: {fileID: 8776666480350970506}
   shine2: {fileID: 5728509298585537787}
+  includeChildren: 1
 --- !u!135 &1092033601519641951
 SphereCollider:
   m_ObjectHideFlags: 0

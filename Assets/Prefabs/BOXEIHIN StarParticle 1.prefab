@@ -9736,3 +9736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76935018ed734394f9aa73a8edd0cedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starGet: {fileID: 0}
+  collider: {fileID: 0}
+  mesh: {fileID: 0}
+  shine: {fileID: 0}
+  shine2: {fileID: 0}
+  includeChildren: 1

@@ -9639,7 +9639,7 @@ GameObject:
   m_Layer: 0
   m_Name: CatPawParticle
   m_TagString: Stamp
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9678,6 +9678,7 @@ MonoBehaviour:
   mesh: {fileID: 3881008466495642405}
   shine: {fileID: 2560895932365053302}
   shine2: {fileID: 2560895933062191402}
+  includeChildren: 1
 --- !u!135 &8024293461473297004
 SphereCollider:
   m_ObjectHideFlags: 0
