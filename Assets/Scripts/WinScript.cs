@@ -7,6 +7,7 @@ public class WinScript : MonoBehaviour
 {
     [SerializeField] PlayerProperties collectablesScript;
     [SerializeField] GameObject winScreen;
+    public ParticleSystem winActive;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,10 @@ public class WinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(collectablesScript.winCondition == true)
+        {
+            winActive.Play();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
