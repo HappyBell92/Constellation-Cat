@@ -9736,3 +9736,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76935018ed734394f9aa73a8edd0cedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starGet: {fileID: 8300000, guid: 9a5ede208d409ad489bc2e82856310c0, type: 3}
+  includeChildren: 1
