@@ -140,7 +140,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 		if(r.velocity.sqrMagnitude > 2f && grounded) // If moving full speed aka magic number 2f or faster and there's ground below
 		{
 			dust.Play();
-			catAudio.PlayOneShot(stepClips[Random.Range(0, stepClips.Length)]); //Play random clip in array
+			catAudio.PlayOneShot(stepClips[Random.Range(0, stepClips.Length)], 0.4f); //Play random clip in array, magic number volume
 		}
 	}
 
