@@ -16,6 +16,7 @@ public class WinScreen : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        Time.timeScale = 1f;
     }
 
     public void MainMenu()
