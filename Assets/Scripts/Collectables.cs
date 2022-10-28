@@ -5,12 +5,9 @@ using UnityEngine;
 public class Collectables : MonoBehaviour
 {
     private bool isColliding = false;
-    public AudioSource starGet;
+    public AudioClip starGet;
 
-    public Collider collider;
-    public MeshRenderer mesh;
-    public ParticleSystem shine;
-    public ParticleSystem shine2;
+    
 
     public bool includeChildren = true;
     // Start is called before the first frame update
@@ -33,12 +30,9 @@ public class Collectables : MonoBehaviour
         {
             PlayerProperties.Instance.AddStars();
             Debug.Log("You Got A Star!");
-            collider.enabled = mesh.enabled = false;
-            starGet.Play();
-            shine.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
-            shine2.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
+            AudioSource.PlayClipAtPoint(starGet, transform.position);
             
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
         StartCoroutine(Reset());
     }

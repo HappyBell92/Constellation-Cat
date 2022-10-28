@@ -7,7 +7,7 @@ public class BoxBreak : MonoBehaviour
     [SerializeField] GameObject itemSpawn;
     public ParticleSystem breakBox;
     private float knockBackStrength = 2.0f;
-    public AudioSource breakSound;
+    public AudioClip breakSound;
     public Collider collider;
     public MeshRenderer mesh;
     // Start is called before the first frame update
@@ -34,9 +34,9 @@ public class BoxBreak : MonoBehaviour
             Vector3 awayFromEnemy = other.gameObject.transform.position - transform.position;
 
             playerRigidbody.velocity = playerRigidbody.transform.up * knockBackStrength;
-            breakBox.Play();
-            collider.enabled = mesh.enabled = false;
-            //Destroy(this.gameObject);
+            AudioSource.PlayClipAtPoint(breakSound, transform.position);
+            //collider.enabled = mesh.enabled = false;
+            Destroy(this.gameObject);
         }
     }
 }
