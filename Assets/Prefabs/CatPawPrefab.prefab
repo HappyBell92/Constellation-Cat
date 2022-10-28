@@ -9672,7 +9672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b156c2a7f73fbaa49894ec5b3e603600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stampCollect: {fileID: 8300000, guid: 155f48979a03c914f9fc460fe276950b, type: 3}
+  stampCollectSoundPrefab: {fileID: 2648307341234749263, guid: 33b7ef3e0a484a84294e64d699a84cf3, type: 3}
   includeChildren: 1
 --- !u!135 &1092033601519641951
 SphereCollider:

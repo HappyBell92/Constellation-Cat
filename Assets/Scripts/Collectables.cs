@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectables : MonoBehaviour
 {
     private bool isColliding = false;
-    public AudioClip starGet;
+    public GameObject starGetSoundPrefab;
 
     
 
@@ -30,7 +30,8 @@ public class Collectables : MonoBehaviour
         {
             PlayerProperties.Instance.AddStars();
             Debug.Log("You Got A Star!");
-            AudioSource.PlayClipAtPoint(starGet, transform.position);
+            //AudioSource.PlayClipAtPoint(starGet, transform.position);
+			Instantiate(starGetSoundPrefab, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
             
             Destroy(this.gameObject);
         }

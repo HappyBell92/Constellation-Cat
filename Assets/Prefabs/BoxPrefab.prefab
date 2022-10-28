@@ -4932,6 +4932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSpawn: {fileID: 2048763935463247443, guid: b3103047496c80544aab73b3b5236ae0, type: 3}
+  breakBoxAudioPrefab: {fileID: 2648307341234749263, guid: 48fedf853e9af45428309f4d764b7e1e, type: 3}
   breakBox: {fileID: 2402327918376997706, guid: e568ae2f72c5c824b8f38afd4cb0ec46, type: 3}
   breakSound: {fileID: 8300000, guid: cb20faf95798d3e408390c1de598005d, type: 3}
   collider: {fileID: -5188856894315184879}

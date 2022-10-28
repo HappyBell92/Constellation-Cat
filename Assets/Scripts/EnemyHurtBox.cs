@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHurtBox : MonoBehaviour
 {
 	[SerializeField] GameObject prefabParentObject;
-	[SerializeField] AudioClip JellyDeathSound;
+	[SerializeField] GameObject JellyDeathSoundPrefab;
 	public ParticleSystem deathCloud;
 	public float knockBackStrength = 10.0f;
 	// Start is called before the first frame update
@@ -27,7 +27,8 @@ public class EnemyHurtBox : MonoBehaviour
 			Rigidbody playerRigidbody = other.gameObject.GetComponent<Rigidbody>();
 			Vector3 awayFromEnemy = other.gameObject.transform.position - transform.position;
 			Instantiate(deathCloud, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
-			AudioSource.PlayClipAtPoint(JellyDeathSound, transform.position);
+			//AudioSource.PlayClipAtPoint(JellyDeathSound, transform.position);
+			Instantiate(JellyDeathSoundPrefab, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
 
 			playerRigidbody.velocity = playerRigidbody.transform.up * knockBackStrength;
 

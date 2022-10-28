@@ -5,7 +5,7 @@ using UnityEngine;
 public class StampCollectables : MonoBehaviour
 {
     private bool isColliding = false;
-    public AudioClip stampCollect;
+    public GameObject stampCollectSoundPrefab;
 
     
     
@@ -32,7 +32,8 @@ public class StampCollectables : MonoBehaviour
         {
             PlayerProperties.Instance.AddStamps();
             PlayerProperties.Instance.AddHealth();
-            AudioSource.PlayClipAtPoint(stampCollect, transform.position);
+            //AudioSource.PlayClipAtPoint(stampCollect, transform.position);
+			Instantiate(stampCollectSoundPrefab, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
             
             Debug.Log("You Got A Stamp!");
             Destroy(this.gameObject);
