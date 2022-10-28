@@ -3938,6 +3938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99516e78f9d3ce14ba7b17380e5d86d7, type: 3}
+--- !u!1 &278833995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3441633255493357100, guid: c75da81b414d52745ab524326f9d5b97, type: 3}
+  m_PrefabInstance: {fileID: 461577007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &280471565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2665522472280945642, guid: 44fd1f459ba99094aa202293d219510f, type: 3}
@@ -6439,7 +6444,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464341117}
-  m_LocalRotation: {x: 0.16539232, y: -0.000000029226346, z: 0.000000006798715, w: 0.98622787}
+  m_LocalRotation: {x: 0.16539232, y: -0.00000002922635, z: 0.000000006798716, w: 0.98622787}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20526,6 +20531,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3600093720663150847, guid: c75da81b414d52745ab524326f9d5b97, type: 3}
   m_PrefabInstance: {fileID: 461577007}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1490152346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278833995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a466ea423413a444b96b582c5a8f876c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToReplaceWith: {fileID: 8987858108331672047, guid: 4502d75fcc39b0b4380e3d9719cf8f3c, type: 3}
 --- !u!1001 &1498613311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26018,6 +26036,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44fd1f459ba99094aa202293d219510f, type: 3}
+--- !u!1 &1982454996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3441633255493357100, guid: c75da81b414d52745ab524326f9d5b97, type: 3}
+  m_PrefabInstance: {fileID: 951187751}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1982454997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982454996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a466ea423413a444b96b582c5a8f876c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToReplaceWith: {fileID: 8987858108331672047, guid: 4502d75fcc39b0b4380e3d9719cf8f3c, type: 3}
 --- !u!1001 &1985366835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27600,6 +27636,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2088043856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3441633255493357100, guid: c75da81b414d52745ab524326f9d5b97, type: 3}
+  m_PrefabInstance: {fileID: 1338151427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2088043857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088043856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a466ea423413a444b96b582c5a8f876c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToReplaceWith: {fileID: 8987858108331672047, guid: 4502d75fcc39b0b4380e3d9719cf8f3c, type: 3}
 --- !u!1001 &2090871436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27747,7 +27801,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091633801}
-  m_LocalRotation: {x: 0.16539234, y: -0.000000029226348, z: 0.0000000067987154, w: 0.98622787}
+  m_LocalRotation: {x: 0.16539234, y: -0.000000029226355, z: 0.0000000067987167, w: 0.98622787}
   m_LocalPosition: {x: 3.1677, y: 37.212788, z: -8.568545}
   m_LocalScale: {x: 0.47949782, y: 0.47949782, z: 0.47949782}
   m_ConstrainProportionsScale: 0
