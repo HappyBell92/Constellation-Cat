@@ -84,6 +84,7 @@ MonoBehaviour:
   detectionTimeDelay: 0.33
   detectionRadius: 5
   aggroTimeMax: 8
+  chasesPlayer: 1
   hoverGroundMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -817,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabParentObject: {fileID: 8987858108331672047}
-  JellyDeathSoundPrefab: {fileID: 0}
+  JellyDeathSoundPrefab: {fileID: 2648307341234749263, guid: 56c86d930d5f53541946446ed9923b03, type: 3}
   deathCloud: {fileID: 9089023343087010227, guid: 072a902ec070e904385ff543af18b031, type: 3}
   knockBackStrength: 10
 --- !u!1 &8987858108331672047
