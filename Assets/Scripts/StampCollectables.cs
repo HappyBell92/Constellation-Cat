@@ -5,12 +5,11 @@ using UnityEngine;
 public class StampCollectables : MonoBehaviour
 {
     private bool isColliding = false;
-    public AudioSource stampCollect;
+    public AudioClip stampCollect;
 
-    public Collider collider;
-    public MeshRenderer mesh;
-    public ParticleSystem shine;
-    public ParticleSystem shine2;
+    
+    
+    
 
     public bool includeChildren = true;
     // Start is called before the first frame update
@@ -33,12 +32,10 @@ public class StampCollectables : MonoBehaviour
         {
             PlayerProperties.Instance.AddStamps();
             PlayerProperties.Instance.AddHealth();
-            stampCollect.Play();
-            collider.enabled = mesh.enabled = false;
-            shine.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
-            shine2.Stop(includeChildren, ParticleSystemStopBehavior.StopEmitting);
+            AudioSource.PlayClipAtPoint(stampCollect, transform.position);
+            
             Debug.Log("You Got A Stamp!");
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
         StartCoroutine(Reset());
     }
