@@ -11,6 +11,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 	[SerializeField] AudioClip hyppyClip, zappedClip;
 	[SerializeField] AudioClip[] stepClips;
 	[SerializeField] Animator catAnim;
+	[SerializeField] PlayerProperties playerProperties;
 	public ParticleSystem starJump;
 	public ParticleSystem dust;
 	public float speed = 5.0f;
@@ -68,7 +69,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 			//Debug.Log("Double Jump!");
 		}
 
-			if (stamps >= 30)
+			if (playerProperties.doubleJumpActive == true)
 		{
 			maxJumps = 2;
 		}
@@ -171,10 +172,10 @@ public class SC_RigidbodyWalker : MonoBehaviour
 			StartCoroutine(InvincibleTime());
 		}
 
-		if (other.CompareTag("Stamp"))
-		{
-			stamps++;
-		}
+		//if (other.CompareTag("Stamp"))
+		//{
+			//stamps++;
+		//}
 		StartCoroutine(Reset());
 	}
 
