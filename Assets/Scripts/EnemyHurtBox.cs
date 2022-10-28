@@ -27,6 +27,7 @@ public class EnemyHurtBox : MonoBehaviour
 			Rigidbody playerRigidbody = other.gameObject.GetComponent<Rigidbody>();
 			Vector3 awayFromEnemy = other.gameObject.transform.position - transform.position;
 			Instantiate(deathCloud, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
+			AudioSource.PlayClipAtPoint(JellyDeathSound, transform.position);
 
 			playerRigidbody.velocity = playerRigidbody.transform.up * knockBackStrength;
 

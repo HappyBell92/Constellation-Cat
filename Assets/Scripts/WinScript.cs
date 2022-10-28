@@ -30,7 +30,7 @@ public class WinScript : MonoBehaviour
         if (collectablesScript.winCondition == true && other.gameObject.CompareTag("Player"))
         {
             Debug.Log("YOU WIN!");
-            winScreen.SetActive(true);
+            SceneManager.LoadScene("WinScreen");
             Time.timeScale = 0f;
         }
     }
