@@ -16,6 +16,7 @@ public class PlayerProperties : MonoBehaviour
     public bool canCollectStar = true;
 
     public bool winCondition = false;
+    public bool doubleJumpActive = false;
 
     private static PlayerProperties instance;
     public static PlayerProperties Instance
@@ -89,6 +90,11 @@ public class PlayerProperties : MonoBehaviour
             Debug.Log("You Died");
             Destroy(this.gameObject);
 
+        }
+
+        if(stamps >= 30)
+        {
+            doubleJumpActive = true;
         }
 
         if(stars >= 12)
