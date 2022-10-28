@@ -8,6 +8,7 @@ public class EnemyAttack : MonoBehaviour
     //private float attackDuration = 2;
     public bool canAttack = true;
     public GameObject attackObject;
+    [SerializeField] GameObject attackSoundPrefab;
 
     [SerializeField] Animator m_Animator;
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class EnemyAttack : MonoBehaviour
     public void ShockAttackEvent() //Called from animation clip
     {
         GameObject newAttack = Instantiate(attackObject, transform.position + -transform.up, transform.rotation * Quaternion.Euler(0, 0, 0));
+        Instantiate(attackSoundPrefab, transform.position + -transform.up, transform.rotation * Quaternion.Euler(0, 0, 0));
     }
 
     IEnumerator AttackCooldown()

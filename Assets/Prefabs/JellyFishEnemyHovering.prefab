@@ -755,6 +755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canAttack: 1
   attackObject: {fileID: 1644079257389832454, guid: 13152ec194af8ca46bd01c79d2f051f6, type: 3}
+  attackSoundPrefab: {fileID: 2648307341234749263, guid: a0c0fab1d8703cd4aa66214174d0f508, type: 3}
   m_Animator: {fileID: 6288256547488563990}
 --- !u!1 &6807586199154680594
 GameObject:
