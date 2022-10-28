@@ -169,8 +169,8 @@ MonoBehaviour:
   groundCheckLength: 1
   stamps: 0
   catAudio: {fileID: 6540744689879690683}
-  hyppyClip: {fileID: 8300000, guid: 6e6aa6a954476454cab94dc0a922ab4e, type: 3}
-  zappedClip: {fileID: 8300000, guid: a985c9aa109e9eb438c43326b7b210df, type: 3}
+  hyppyAudioPrefab: {fileID: 2648307341234749263, guid: 075dfe08787f0574f86bb492d33ff709, type: 3}
+  zappedAudioPrefab: {fileID: 2648307341234749263, guid: 6dd783d229a80454088108a502474889, type: 3}
   stepClips:
   - {fileID: 8300000, guid: 35ac6e34262a1f4478b2225af7c412f1, type: 3}
   - {fileID: 8300000, guid: 2b4d144316336494a8ce54aeb70be912, type: 3}

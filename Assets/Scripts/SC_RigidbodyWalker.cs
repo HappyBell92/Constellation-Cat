@@ -8,7 +8,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 	[SerializeField] float groundCheckLength = 1f;
 	[SerializeField] private int stamps;
 	[SerializeField] AudioSource catAudio;
-	[SerializeField] AudioClip hyppyClip, zappedClip;
+	[SerializeField] GameObject hyppyAudioPrefab, zappedAudioPrefab;
 	[SerializeField] AudioClip[] stepClips;
 	[SerializeField] Animator catAnim;
 	[SerializeField] PlayerProperties playerProperties;
@@ -132,7 +132,8 @@ public class SC_RigidbodyWalker : MonoBehaviour
 			r.velocity = r.transform.up * jumpHeight;
 			Instantiate(starJump, transform.position + -transform.up, transform.rotation * Quaternion.Euler(0, 0, 0));
 			catAnim.SetTrigger("Jump"); // Do jump animation
-			catAudio.PlayOneShot(hyppyClip);
+			//catAudio.PlayOneShot(hyppyClip);
+			Instantiate(hyppyAudioPrefab, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
 			canJump = false;
 			jumps = jumps - 1;
 			StartCoroutine(JumpCooldown());
@@ -168,7 +169,8 @@ public class SC_RigidbodyWalker : MonoBehaviour
 		if(other.tag == "EnemyAttack" && isColliding != invincible)
 		{
 			PlayerProperties.Instance.RemoveHealth();
-			catAudio.PlayOneShot(zappedClip);
+			//catAudio.PlayOneShot(zappedClip);
+			Instantiate(zappedAudioPrefab, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
 			invincible = true;
 			StartCoroutine(InvincibleTime());
 		}
