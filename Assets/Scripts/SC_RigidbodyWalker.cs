@@ -9,6 +9,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 	[SerializeField] private int stamps;
 	[SerializeField] AudioSource catAudio;
 	[SerializeField] GameObject hyppyAudioPrefab, zappedAudioPrefab;
+	[SerializeField] GameObject zappedParticle;
 	[SerializeField] AudioClip[] stepClips;
 	[SerializeField] Animator catAnim;
 	[SerializeField] PlayerProperties playerProperties;
@@ -171,6 +172,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 			PlayerProperties.Instance.RemoveHealth();
 			//catAudio.PlayOneShot(zappedClip);
 			Instantiate(zappedAudioPrefab, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
+			Instantiate(zappedParticle, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
 			invincible = true;
 			StartCoroutine(InvincibleTime());
 		}
@@ -194,6 +196,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 		if(other.tag == "EnemyAttack")
 		{
 			Debug.Log("You Got Damaged By An Enemy!");
+			//Instantiate(zappedParticle, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
 			frozen = true;
 			StartCoroutine(IsFrozen());
 		}
@@ -204,6 +207,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
 		if (other.gameObject.CompareTag("EnemyAttack"))
 		{
 			Debug.Log("BZZZT!");
+			//Instantiate(zappedParticle, transform.position, transform.rotation * Quaternion.Euler(0, 0, 0));
 			frozen = true;
 			StartCoroutine(IsFrozen());
 		}

@@ -171,6 +171,7 @@ MonoBehaviour:
   catAudio: {fileID: 6540744689879690683}
   hyppyAudioPrefab: {fileID: 2648307341234749263, guid: 075dfe08787f0574f86bb492d33ff709, type: 3}
   zappedAudioPrefab: {fileID: 2648307341234749263, guid: 6dd783d229a80454088108a502474889, type: 3}
+  zappedParticle: {fileID: 3375552530981591068, guid: be8448a53b1d0a0439f449e1c15e7a90, type: 3}
   stepClips:
   - {fileID: 8300000, guid: 35ac6e34262a1f4478b2225af7c412f1, type: 3}
   - {fileID: 8300000, guid: 2b4d144316336494a8ce54aeb70be912, type: 3}

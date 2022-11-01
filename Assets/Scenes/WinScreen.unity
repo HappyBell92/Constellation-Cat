@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: e113a2ad36971c8469b8229495349e6b, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -923,6 +923,7 @@ GameObject:
   - component: {fileID: 778594723}
   - component: {fileID: 778594722}
   - component: {fileID: 778594725}
+  - component: {fileID: 778594726}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1005,7 +1006,7 @@ AudioSource:
   m_GameObject: {fileID: 778594721}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ab37201fd82e5da4f88d9413acafefbe, type: 2}
   m_audioClip: {fileID: 8300000, guid: 341a445ca2676d94191755b4eb0eab95, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -1092,6 +1093,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &778594726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778594721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b79baf199c4f5a4e897e8ff589bfb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMixer: {fileID: 0}
+  effectsMixer: {fileID: 0}
 --- !u!1001 &862515366
 PrefabInstance:
   m_ObjectHideFlags: 0
