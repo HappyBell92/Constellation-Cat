@@ -13,7 +13,7 @@ public class MusicSlider : MonoBehaviour
     {
         musicSlider = GetComponent<Slider>();
         //musicMixer.GetFloat("Musicolume", out musicVol);
-        musicVol = PlayerPrefs.GetFloat("MusicVolume");
+        musicVol = Mathf.Max (PlayerPrefs.GetFloat("MusicVolume"), 0.005f);
         musicSlider.value = musicVol;
         musicMixer.SetFloat("MusicVolumeParam", Mathf.Log10 (musicVol) *20);
     }
